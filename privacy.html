@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Lumen</title>
+<meta name="description" content="What Lumen collects, what it doesn't, and your rights.">
+<meta name="theme-color" content="#0F0820">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500;600&family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<article class="longform">
+  <a href="/" class="back">← Lumen</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 23 May 2026.</p>
+
+  <p>Lumen is built to be quiet. This page explains, in plain language, what we collect, why, and what we never collect. If anything here is unclear, write to <a href="mailto:hello@pray.app">hello@pray.app</a>.</p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li><strong>Your prayer prompts.</strong> The text or speech you give the app to generate a prayer. This is sent to our infrastructure and then to our LLM provider so a prayer can be written.</li>
+    <li><strong>Your saved intentions.</strong> The labels and context you set up — e.g. <em>Mom Linda — health</em> — so that Quick Pray can re-use them.</li>
+    <li><strong>Your prayer library.</strong> The text of each prayer generated, your tone and length choices, and whether you've marked a prayer as a favorite.</li>
+    <li><strong>An anonymous account ID.</strong> Created automatically on first launch so your library can sync across sessions. You can sign in with Apple or Google later to back it up across devices.</li>
+    <li><strong>Subscription state.</strong> Whether you're on the Free, Standard, or Pro tier, and how many prayers you've generated this month. Used to enforce the cap.</li>
+    <li><strong>Crash reports &amp; aggregated analytics.</strong> Anonymous error reports and screen-view counts that help us spot regressions. No content from your prayers, no names, no audio.</li>
+  </ul>
+
+  <h2>What we never collect</h2>
+  <ul>
+    <li>Your contact list, photos, microphone audio outside the active generate screen, location, or any device identifier beyond what your platform exposes for in-app purchases.</li>
+    <li>The text of your prayers is never sold, never shared with advertisers, never used to train AI models we don't operate.</li>
+  </ul>
+
+  <h2>Where the data lives</h2>
+  <p>Your account, intentions, and library are stored on Supabase (Postgres). Generated audio is streamed to your device and not retained on our servers beyond the moment it takes to play. The generation pipeline runs on Cloudflare Workers; that proxy talks to Anthropic (LLM) and ElevenLabs (text-to-speech). Both providers operate under their own privacy policies, available on their websites.</p>
+
+  <h2>Your rights</h2>
+  <ul>
+    <li><strong>Delete everything.</strong> Settings → Account → Delete account. This permanently removes your library, intentions, and account row. We cannot recover them after.</li>
+    <li><strong>Export your library.</strong> Same screen, "Export" — produces a plain-text bundle of every prayer.</li>
+    <li><strong>Stop syncing.</strong> Sign out from Settings → Account. Your local copy stays on the device but no further sync happens.</li>
+    <li><strong>EU / UK GDPR &amp; California CCPA.</strong> The above rights cover the deletion and access rights both jurisdictions require. Write to <a href="mailto:hello@pray.app">hello@pray.app</a> for any GDPR data-subject request.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Lumen is intended for adults. We do not knowingly collect data from anyone under 13. If you believe a minor has created an account, write to us and we will delete it.</p>
+
+  <h2>Crisis resources</h2>
+  <p>If you describe a thought of harming yourself, the app intentionally does not generate a prayer. Instead it surfaces the phone numbers of crisis hotlines in your region. Those hotline calls are not made through Lumen; we never see them.</p>
+
+  <h2>Changes</h2>
+  <p>If we materially change what we collect, we'll update this page and bump the date at the top. For non-trivial changes we'll also surface a notice inside the app the next time you open it.</p>
+</article>
+
+<footer>
+  <span class="word-mini">Lumen</span>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/support.html">Support</a>
+  </nav>
+</footer>
+
+</body>
+</html>
