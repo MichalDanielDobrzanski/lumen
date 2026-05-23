@@ -73,5 +73,5 @@ Three places need the same site URL:
 - App Store / Play Console listing fields (uploaded via
   `fastlane sync_metadata`)
 
-The defaults assume `michaldobrzanski.github.io/lumen`. If your public
+The defaults assume `michaldanieldobrzanski.github.io/lumen`. If your public
 repo lives somewhere else, sed-replace before pushing fastlane.
