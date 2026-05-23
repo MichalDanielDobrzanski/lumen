@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Lumen</title>
-<meta name="description" content="What Lumen collects, what it doesn't, and your rights.">
+<meta name="description" content="Lumen privacy notice — controller, processors, legal bases, your rights, account deletion, crisis-safety treatment.">
 <meta name="theme-color" content="#0F0820">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500;600&family=UnifrakturMaguntia&display=swap">
@@ -14,46 +14,115 @@
 
 <article class="longform">
   <a href="./" class="back">← Lumen</a>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated 23 May 2026.</p>
+  <h1>Lumen — Privacy Policy</h1>
+  <p class="updated"><strong>Data Controller:</strong> Michał Dobrzański, operating as "Oscillator Michał Dobrzański," ul. Św. Wincentego 110/65, 03-291 Warszawa, Poland.<br>
+  <strong>Last revised:</strong> 23 May 2026.</p>
 
-  <p>Lumen is built to be quiet. This page explains, in plain language, what we collect, why, and what we never collect. If anything here is unclear, write to <a href="mailto:lumen.prayer.app@gmail.com">lumen.prayer.app@gmail.com</a>.</p>
+  <p>This privacy notice explains how Oscillator Michał Dobrzański ("<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>") processes personal data in connection with the Lumen application and its supporting services (the "<strong>Services</strong>"). It is written for compliance with the EU General Data Protection Regulation (Regulation 2016/679, "<strong>GDPR</strong>"), the United Kingdom Data Protection Act 2018, the California Consumer Privacy Act / California Privacy Rights Act ("<strong>CCPA/CPRA</strong>"), the Polish Act on the Protection of Personal Data (10 May 2018), and Apple App Store / Google Play platform requirements.</p>
 
-  <h2>What we collect</h2>
+  <p>If you have any question or want to exercise a right described below, write to <a href="mailto:lumen.prayer.app@gmail.com">lumen.prayer.app@gmail.com</a> or by post to the controller's address above.</p>
+
+  <h2>1. Information we collect</h2>
+  <p>We process the following categories of personal data, grouped by source. Where a category is collected only conditionally, the condition is named in parentheses.</p>
   <ul>
-    <li><strong>Your prayer prompts.</strong> The text or speech you give the app to generate a prayer. This is sent to our infrastructure and then to our LLM provider so a prayer can be written.</li>
-    <li><strong>Your saved intentions.</strong> The labels and context you set up — e.g. <em>Mom Linda — health</em> — so that Quick Pray can re-use them.</li>
-    <li><strong>Your prayer library.</strong> The text of each prayer generated, your tone and length choices, and whether you've marked a prayer as a favorite.</li>
-    <li><strong>An anonymous account ID.</strong> Created automatically on first launch so your library can sync across sessions. You can sign in with Apple or Google later to back it up across devices.</li>
-    <li><strong>Subscription state.</strong> Whether you're on the Free, Standard, or Pro tier, and how many prayers you've generated this month. Used to enforce the cap.</li>
-    <li><strong>Crash reports &amp; aggregated analytics.</strong> Anonymous error reports and screen-view counts that help us spot regressions. No content from your prayers, no names, no audio.</li>
+    <li><strong>Identifiers.</strong> An anonymous account UUID created on first launch, and — if you choose to sign in — your Apple ID or Google account identifier. We never receive your Apple ID password or Google password; we only receive the opaque identifier those providers issue to us.</li>
+    <li><strong>Prayer prompts.</strong> The free-text or transcribed-speech input you submit when generating a prayer. The transcription happens on your device (or via Apple/Google speech APIs); we receive the resulting text.</li>
+    <li><strong>Saved intentions.</strong> The labels and optional context you create for Quick Pray (e.g. "Mom Linda — health").</li>
+    <li><strong>Prayer library.</strong> The text of each generated prayer, the tone and length you chose, the voice you chose, the timestamp, and whether you marked the prayer as a favorite.</li>
+    <li><strong>Subscription state.</strong> Your current tier (Free / Standard / Pro), the count of generations you have used in the current billing period, and subscription-event metadata received from RevenueCat (which itself receives the underlying event from Apple or Google).</li>
+    <li><strong>Diagnostic data</strong> (only if you have not opted out under Settings → Privacy). Anonymised stack traces, device model, OS version, app version, screen-view counts, and lifecycle event names ("onboarding_completed," "generate_started," "paywall_shown" etc.). Never the content of your prompts, never your names, never audio.</li>
+    <li><strong>Crisis-pipeline flag</strong> — a single boolean indicating that the crisis-resources screen fired during a session. Never the input text that triggered it.</li>
   </ul>
 
-  <h2>What we never collect</h2>
+  <p><strong>How the data reaches us.</strong> Most of it comes directly from your interactions with the Services (you type a prompt; you tap a tile). Subscription state is forwarded server-to-server by RevenueCat from Apple/Google. We do not buy personal data from third parties and we do not use third-party advertising trackers; the app does not show ads.</p>
+
+  <h2>2. Why we process the data, and on what legal basis</h2>
+  <p>Each entry below identifies a purpose, the data categories used for that purpose, and the legal basis under Article 6(1) GDPR. Where a basis is "consent," you may withdraw consent at any time without affecting the lawfulness of earlier processing.</p>
   <ul>
-    <li>Your contact list, photos, microphone audio outside the active generate screen, location, or any device identifier beyond what your platform exposes for in-app purchases.</li>
-    <li>The text of your prayers is never sold, never shared with advertisers, never used to train AI models we don't operate.</li>
+    <li><strong>Generating prayers (the core service).</strong> Categories: prompts, intentions, library, identifiers. <em>Legal basis:</em> Article 6(1)(b) GDPR — performance of the contract you accepted by installing the app.</li>
+    <li><strong>Storing your library for replay.</strong> Categories: library, identifiers. <em>Legal basis:</em> Article 6(1)(b) GDPR.</li>
+    <li><strong>Enforcing the per-tier generation cap.</strong> Categories: subscription state, identifiers. <em>Legal basis:</em> Article 6(1)(b) (performance of contract) and Article 6(1)(c) (legal obligations to App Store / Play Store).</li>
+    <li><strong>Stable operation, bug-fixing.</strong> Categories: diagnostic data. <em>Legal basis:</em> Article 6(1)(f) GDPR — our legitimate interest in operating a working product. We have weighed this against your interests; the impact is minimal because the data is pseudonymised and never includes prompt content. You can object — see Section 5.</li>
+    <li><strong>Aggregated product analytics.</strong> Categories: diagnostic-data event counts only. <em>Legal basis:</em> Article 6(1)(f) GDPR. Same balancing as above.</li>
+    <li><strong>Operating the crisis-safety pipeline.</strong> Categories: crisis-pipeline flag. <em>Legal basis:</em> Article 6(1)(f) GDPR — operating a safety control on a product accessible to potentially vulnerable users.</li>
+    <li><strong>Complying with our own legal obligations</strong> (tax, accounting, consumer-protection record-keeping). Categories: minimum necessary, primarily subscription state + identifiers. <em>Legal basis:</em> Article 6(1)(c) GDPR.</li>
+    <li><strong>Responding to data-subject requests and legal claims.</strong> Categories: as needed to respond. <em>Legal basis:</em> Article 6(1)(c) and (f).</li>
   </ul>
 
-  <h2>Where the data lives</h2>
-  <p>Your account, intentions, and library are stored on Supabase (Postgres). Generated audio is streamed to your device and not retained on our servers beyond the moment it takes to play. The generation pipeline runs on Cloudflare Workers; that proxy talks to Anthropic (LLM) and ElevenLabs (text-to-speech). Both providers operate under their own privacy policies, available on their websites.</p>
+  <p>We do <strong>not</strong> process special categories of personal data (Article 9 GDPR) as a defined input. We acknowledge that using a Catholic-tradition prayer app may itself be considered an inference about your religious beliefs; we therefore treat the existence of your account as sensitive and limit its disclosure as described in Section 3.</p>
 
-  <h2>Your rights</h2>
+  <h2>3. Sub-processors — who else handles your data</h2>
+  <p>We share personal data only with the sub-processors listed below. Each acts under a written data-processing agreement, uses the data solely for the purposes we direct, and applies equivalent or stronger security measures.</p>
   <ul>
-    <li><strong>Delete everything.</strong> Settings → Account → Delete account. This permanently removes your library, intentions, and account row. We cannot recover them after.</li>
-    <li><strong>Export your library.</strong> Same screen, "Export" — produces a plain-text bundle of every prayer.</li>
-    <li><strong>Stop syncing.</strong> Sign out from Settings → Account. Your local copy stays on the device but no further sync happens.</li>
-    <li><strong>EU / UK GDPR &amp; California CCPA.</strong> The above rights cover the deletion and access rights both jurisdictions require. Write to <a href="mailto:lumen.prayer.app@gmail.com">lumen.prayer.app@gmail.com</a> for any GDPR data-subject request.</li>
+    <li><strong>Anthropic, PBC</strong> (United States) — generates the prayer text from your prompt. Processes prompts for the duration of one generation. Operates under Anthropic's published commercial terms; does not use the data to train models. International-transfer safeguard: EU Standard Contractual Clauses (Commission Implementing Decision (EU) 2021/914).</li>
+    <li><strong>ElevenLabs Inc.</strong> (United States) — converts the prayer text to streaming audio. Processes the prayer text for the duration of one generation. International-transfer safeguard: EU SCCs.</li>
+    <li><strong>Supabase, Inc.</strong> (United States; data stored in an EU-region instance) — stores your account row, intentions, prayer library, and subscription state at rest. International-transfer safeguard: EU SCCs.</li>
+    <li><strong>Cloudflare, Inc.</strong> (United States; edge nodes globally) — runs the proxy that routes your requests to the providers above. May briefly process request metadata (IP address, user-agent) for security and rate-limiting. International-transfer safeguard: EU SCCs.</li>
+    <li><strong>RevenueCat, Inc.</strong> (United States) — receives subscription events from Apple / Google and forwards them to us. Processes a hashed user identifier plus subscription metadata. International-transfer safeguard: EU SCCs.</li>
+    <li><strong>Apple Inc.</strong> and <strong>Google LLC</strong> — handle in-app payments and act as the distribution channels. Each is an independent controller for its own purposes (billing, fraud prevention, store analytics) under its respective privacy policy.</li>
+    <li><strong>Sentry (Functional Software, Inc.)</strong> (United States) — receives crash diagnostics if you have not opted out. International-transfer safeguard: EU SCCs.</li>
+    <li><strong>PostHog Inc.</strong> (United States / EU instance) — receives anonymised product-analytics events if you have not opted out. International-transfer safeguard: EU SCCs where applicable.</li>
   </ul>
 
-  <h2>Children</h2>
-  <p>Lumen is intended for adults. We do not knowingly collect data from anyone under 13. If you believe a minor has created an account, write to us and we will delete it.</p>
+  <p>We <strong>do not sell</strong> or "share" personal data within the meaning of the CCPA/CPRA. We do not place third-party advertising trackers in the app. We do not show ads.</p>
 
-  <h2>Crisis resources</h2>
-  <p>If you describe a thought of harming yourself, the app intentionally does not generate a prayer. Instead it surfaces the phone numbers of crisis hotlines in your region. Those hotline calls are not made through Lumen; we never see them.</p>
+  <p>Public authorities may require us to disclose data under a binding legal order (court order, subpoena, lawful regulator request). We disclose only the minimum necessary and, where lawful, notify you so you can challenge the order.</p>
 
-  <h2>Changes</h2>
-  <p>If we materially change what we collect, we'll update this page and bump the date at the top. For non-trivial changes we'll also surface a notice inside the app the next time you open it.</p>
+  <h2>4. International data transfers</h2>
+  <p>Some sub-processors are based outside the European Economic Area, primarily in the United States. Where personal data is transferred to a country outside the EEA that the European Commission has not recognised as providing an adequate level of protection, the transfer is governed by the EU Standard Contractual Clauses (Commission Implementing Decision (EU) 2021/914 of 4 June 2021), supplemented by additional technical and organisational measures: TLS 1.3 in transit, encryption at rest, strict access controls, contractual audit rights. A copy of the relevant clauses is available on request at the contact above.</p>
+
+  <h2>5. Your rights</h2>
+  <p>Under the GDPR you have the following rights. You can exercise any of them, free of charge, by writing to <a href="mailto:lumen.prayer.app@gmail.com">lumen.prayer.app@gmail.com</a>. We respond within 30 days (extendable by a further 60 days for complex requests, in which case we will tell you within the first 30 days).</p>
+  <ul>
+    <li><strong>Access</strong> (Article 15) — obtain a copy of the personal data we hold about you.</li>
+    <li><strong>Rectification</strong> (Article 16) — have inaccurate data corrected.</li>
+    <li><strong>Erasure / "right to be forgotten"</strong> (Article 17) — have your data deleted. The in-app shortcut is <em>Settings → Account → Delete account</em>; it is irrevocable.</li>
+    <li><strong>Restriction of processing</strong> (Article 18) — require us to pause processing while a dispute is resolved.</li>
+    <li><strong>Data portability</strong> (Article 20) — receive your library and intentions as a plain-text export under <em>Settings → Account → Export</em>.</li>
+    <li><strong>Object</strong> (Article 21) — object to processing based on legitimate interests (analytics + crash diagnostics). You can switch these off under <em>Settings → Privacy</em>.</li>
+    <li><strong>Not be subject to automated decision-making</strong> (Article 22) — Lumen does not make decisions producing legal or similarly significant effects on you solely by automated means.</li>
+    <li><strong>Withdraw consent</strong> (Article 7(3)) — where processing is based on consent, you can withdraw it at any time.</li>
+    <li><strong>Lodge a complaint</strong> with a supervisory authority. In Poland this is the President of the Personal Data Protection Office — <em>Prezes Urzędu Ochrony Danych Osobowych (UODO)</em>, ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>. Residents of other EU/EEA member states may lodge a complaint with their local supervisory authority — see the EDPB list at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">edpb.europa.eu</a>.</li>
+  </ul>
+
+  <p><strong>California residents (CCPA/CPRA).</strong> You have parallel rights of access, deletion, correction, and the right to limit the use of sensitive personal information. We honour them via the same email path. We do not sell or share personal information for cross-context behavioural advertising; there is therefore no "Do Not Sell or Share" link.</p>
+
+  <h2>6. Retention</h2>
+  <p>We keep data only as long as needed for the purpose for which it was collected:</p>
+  <ul>
+    <li><strong>Account, intentions, library:</strong> until you delete the item or delete your account.</li>
+    <li><strong>Subscription state:</strong> for the duration of your subscription plus the period required by Polish accounting / tax law (currently 5 calendar years under the Polish Accounting Act of 29 September 1994).</li>
+    <li><strong>Diagnostic data, product analytics:</strong> 90 days (crash diagnostics); 12 months in aggregated form (product analytics); 12 months for the crisis-pipeline flag.</li>
+    <li><strong>Backup copies</strong> roll on a 30-day cycle; once an item is deleted from the primary store, copies are overwritten within 30 days.</li>
+  </ul>
+
+  <h2>7. How to delete your account</h2>
+  <p>Apple App Store and Google Play both require app developers to provide an in-app account-deletion path. In Lumen this is at <strong><em>Settings → Account → Delete account</em></strong>. Deletion is permanent and immediate; we do not maintain a "recoverable" state.</p>
+
+  <p>If you cannot reach the in-app screen (e.g. you have lost device access), email <a href="mailto:lumen.prayer.app@gmail.com">lumen.prayer.app@gmail.com</a> from the address linked to your Apple/Google sign-in. We will process deletion within 30 days.</p>
+
+  <h2>8. Children</h2>
+  <p>Lumen is not directed to children. We do not knowingly collect personal data from anyone under the age of 16, which is the GDPR default age for digital-services consent (Article 8 GDPR). Where Polish or other applicable local law lowers this threshold to 13, the local threshold applies. If we become aware that we have collected data from a child without verified parental consent, we will delete it without undue delay. Parents and guardians can contact us at the email above to request review or deletion of any account they believe relates to a child.</p>
+
+  <h2>9. Crisis-safety treatment</h2>
+  <p>If your prompt contains language indicating thoughts of suicide or self-harm, the app intentionally <strong>does not generate a prayer</strong>. It surfaces the phone numbers of crisis hotlines for the user's region instead (e.g. 988 in the United States, 116 123 in the United Kingdom and Ireland). Calls are routed by your device's dialer; they do not pass through our infrastructure. We record only an anonymous boolean indicating that the crisis screen fired — never the input text that triggered it.</p>
+
+  <h2>10. Security</h2>
+  <p>We apply industry-standard technical and organisational measures: TLS 1.3 for data in transit; AES-256 at rest in Supabase; row-level security so each user can only access their own rows; least-privilege service-account keys; no hard-coded credentials in the mobile binary; two-factor authentication on all maintainer accounts. No system is perfectly secure; if a breach occurs that is likely to result in a risk to your rights and freedoms, we will notify the supervisory authority within 72 hours and you without undue delay, as required by Articles 33–34 GDPR.</p>
+
+  <h2>11. Cookies and similar technologies</h2>
+  <p>The Lumen mobile app does not use cookies or third-party tracking SDKs. The marketing website does not set cookies; the only third-party request it makes is to Google Fonts to load Lora, Inter, and UnifrakturMaguntia. Google may receive your IP address as part of that request under its own privacy policy.</p>
+
+  <h2>12. Changes to this notice</h2>
+  <p>We update this notice when our processing changes. The "Last revised" date at the top moves with every revision. Material changes will additionally be flagged in the app on the next launch and announced in the App Store / Play Store release notes. For changes that require fresh consent under GDPR, we will ask for it explicitly inside the app.</p>
+
+  <h2>13. Contact</h2>
+  <p>For any privacy question, complaint, or data-subject request:</p>
+  <p>Oscillator Michał Dobrzański<br>
+  ul. Św. Wincentego 110/65<br>
+  03-291 Warszawa<br>
+  Poland<br>
+  Email: <a href="mailto:lumen.prayer.app@gmail.com">lumen.prayer.app@gmail.com</a></p>
 </article>
 
 <footer>
